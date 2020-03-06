@@ -16,11 +16,9 @@ categories: update example
 </p>
 
 <script type="text/javascript">
-var initial = "1\n" +
-    "2\n" +
-    "3\n" +
-    "4\n" +
-    "5";
+var initial = "function () {\n" +
+    "	\n" +
+    "}";
 var parsonsPuzzle = new ParsonsWidget({
     "sortableId": "sortable",
     "max_wrong_lines": 10,
