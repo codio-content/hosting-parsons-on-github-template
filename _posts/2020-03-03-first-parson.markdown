@@ -57,7 +57,7 @@ var initial = "1\n" +
     "3\n" +
     "4\n" +
     "5";
-var parsonsPuzzle = new ParsonsWidget({
+var parsonsPuzzle2 = new ParsonsWidget({
     "sortableId": "sortable2",
     "max_wrong_lines": 10,
     "grader": ParsonsWidget._graders.LineBasedGrader,
@@ -66,14 +66,14 @@ var parsonsPuzzle = new ParsonsWidget({
     "x_indent": 50,
     "lang": "en"
 });
-parsonsPuzzle.init(initial);
-parsonsPuzzle.shuffleLines();
+parsonsPuzzle2.init(initial);
+parsonsPuzzle2.shuffleLines();
 $("#newInstanceLink2").click(function(event){
     event.preventDefault();
-    parsonsPuzzle.shuffleLines();
+    parsonsPuzzle2.shuffleLines();
 });
 $("#feedbackLink2").click(function(event){
     event.preventDefault();
-    parsonsPuzzle.getFeedback();
+    parsonsPuzzle2.getFeedback();
 });
 </script>
