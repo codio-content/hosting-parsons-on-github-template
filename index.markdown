@@ -4,8 +4,9 @@
 
 layout: default
 ---
+# Parsons Practice
 
-# first parsons example
+## Parsons 1
 
 <div id="sortableTrash" class="sortable-code"></div>
 <div id="sortable" class="sortable-code"></div>
@@ -41,7 +42,7 @@ $("#feedbackLink").click(function(event){
 });
 </script>
 
-# the second one
+## Parsons 2
 
 <div id="sortableTrash2" class="sortable-code"></div>
 <div id="sortable2" class="sortable-code"></div>
