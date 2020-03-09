@@ -13,8 +13,8 @@ layout: default
 <div style="clear:both;"></div>
 
 <p>
-    <input id="newInstanceLink" value="New instance" type="button" />
-    <input id="feedbackLink" value="Get feedback" type="button" />
+    <input id="newInstanceLink" value="Reset Problem" type="button" />
+    <input id="feedbackLink" value="Get Feedback" type="button" />
 </p>
 
 <script type="text/javascript">
@@ -49,8 +49,8 @@ $("#feedbackLink").click(function(event){
 <div style="clear:both;"></div>
 
 <p>
-    <input id="newInstanceLink2" value="New instance" type="button" />
-    <input id="feedbackLink2" value="Get feedback" type="button" />
+    <input id="newInstanceLink2" value="Reset Problem" type="button" />
+    <input id="feedbackLink2" value="Get Feedback" type="button" />
 </p>
 
 <script type="text/javascript">
