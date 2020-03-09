@@ -21,8 +21,9 @@
 title: Parsons UI Example
 email: support@codio.com
 description: # >- # this means to ignore newlines until "baseurl:"
-  Drag or shuffle the blocks of code in the practice problems below to create functional programs.
+  Drag or shuffle the blocks of code in the practice problems below.
   Remember to indent where appropriate by dragging blocks to the right.
+  
   To check your work, press the "Get Feedback" button.
   To start over, press the "Reset Problem" button.
 baseurl: "/parsons-ui-example" # the subpath of your site, e.g. /blog
