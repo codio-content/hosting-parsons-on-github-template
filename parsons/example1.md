@@ -51,6 +51,6 @@ function(){
       event.preventDefault(); 
       parsonsPuzzle.getFeedback(); 
   }); 
-}();
+</script>
     
 [Next](./example2.html)
