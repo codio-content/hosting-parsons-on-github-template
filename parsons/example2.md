@@ -38,4 +38,4 @@ $("#feedbackLink").click(function(event){
 });
 </script>
 
-[Previous](./parsons/example1.html)
+[Previous](./example1.html)
