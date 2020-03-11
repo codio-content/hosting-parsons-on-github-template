@@ -3,13 +3,240 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: default
+title: Multiple Parson's Problems on One Page
 ---
 # Parsons Practice
 
-## Parsons 1
+## Parsons 1 (Line Based Grader)
+Re-arrange the blocks below so they print out "Hello World!"
 
-[Example 1](./parsons/example1.html)
+<div id="1-sortableTrash" class="sortable-code"></div> 
+<div id="1-sortable" class="sortable-code"></div> 
+<div style="clear:both;"></div> 
+<p> 
+    <input id="1-feedbackLink" value="Get Feedback" type="button" /> 
+    <input id="1-newInstanceLink" value="Reset Problem" type="button" /> 
+</p> 
+<script type="text/javascript">
+function(){
+  var initial = "print(\"Hello\")\n" +
+    "print(\" \")\n" +
+    "print(\"World\")\n" +
+    "print(\"!\")";
+  var parsonsPuzzle = new ParsonsWidget({
+    "sortableId": "1-sortable",
+    "max_wrong_lines": 10,
+    "grader": ParsonsWidget._graders.LineBasedGrader,
+    "exec_limit": 2500,
+    "can_indent": false,
+    "x_indent": 50,
+    "lang": "en",
+    "trashId": "sortableTrash"
+  });
+  parsonsPuzzle.init(initial);
+  parsonsPuzzle.shuffleLines();
+  $("#1-newInstanceLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.shuffleLines(); 
+  }); 
+  $("#1-feedbackLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.getFeedback(); 
+  }); 
+}();
+  
 
-## Parsons 2
+## Parsons 2 (Variable Check Grader)
+Construct a program that swaps the values of variables <code>x</code> and <code>y</code> using the helper variable <code>tmp</code>. You can change the names of the variables (<span class="jsparson-toggle"></span>) by clicking them.
 
-[Example 2](./parsons/example2.html)
+<div id="2-sortableTrash" class="sortable-code"></div> 
+<div id="2-sortable" class="sortable-code"></div> 
+<div style="clear:both;"></div> 
+<p> 
+    <input id="2-feedbackLink" value="Get Feedback" type="button" /> 
+    <input id="2-newInstanceLink" value="Reset Problem" type="button" /> 
+</p> 
+<script type="text/javascript">
+function(){
+  var initial = "$$toggle::x::y::tmp$$ = $$toggle::x::y::tmp$$\n" +
+    "$$toggle::x::y::tmp$$ = $$toggle::x::y::tmp$$\n" +
+    "$$toggle::x::y::tmp$$ = $$toggle::x::y::tmp$$";
+  var parsonsPuzzle = new ParsonsWidget({
+    "sortableId": "2-sortable",
+    "max_wrong_lines": 10,
+    "grader": ParsonsWidget._graders.VariableCheckGrader,
+    "exec_limit": 2500,
+    "can_indent": true,
+    "x_indent": 50,
+    "lang": "en",
+    "trashId": "sortableTrash",
+    "vartests": [
+        {
+            "message": "Testing with initial variable values x = 3 and y = 4",
+            "initcode": "x = 3\ny = 4",
+            "code": "",
+            "variables": {}
+        },
+        {
+            "message": "Testing with initial variable values x = 0 and y = 2",
+            "initcode": "x = 0\ny = 2",
+            "code": "",
+            "variables": {}
+        }
+    ]
+  });
+  parsonsPuzzle.init(initial);
+  parsonsPuzzle.shuffleLines();
+  $("#2-newInstanceLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.shuffleLines(); 
+  }); 
+  $("#2-feedbackLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.getFeedback(); 
+  }); 
+}();
+  
+## Parsons 3 (Unit Test Grader)
+Your task is to construct a function which returns the index of the largest element in the array.
+
+<div id="3-sortableTrash" class="sortable-code"></div> 
+<div id="3-sortable" class="sortable-code"></div> 
+<div style="clear:both;"></div> 
+<p> 
+    <input id="3-feedbackLink" value="Get Feedback" type="button" /> 
+    <input id="3-newInstanceLink" value="Reset Problem" type="button" /> 
+</p> 
+<script type="text/javascript">
+function(){
+  var initial = "def maxindex(arg):\n" +
+    " ans = 0\n" +
+    " for i in range(len(arg)):\n" +
+    " if arg[i] > arg[ans]:\n" +
+    " ans = i\n" +
+    " while True:\n" +
+    "pass\n" +
+    " return ans";
+  var parsonsPuzzle = new ParsonsWidget({
+    "sortableId": "3-sortable",
+    "max_wrong_lines": 10,
+    "grader": ParsonsWidget._graders.UnitTestGrader,
+    "exec_limit": 2500,
+    "can_indent": true,
+    "x_indent": 50,
+    "lang": "en",
+    "trashId": "sortableTrash",
+    "unittests": "import unittestparson\nclass myTests(unittestparson.unittest):\n  def test_0(self):\n    self.assertEqual(,,)\n_test_result = myTests().main()"
+  });
+  parsonsPuzzle.init(initial);
+  parsonsPuzzle.shuffleLines();
+  $("#3-newInstanceLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.shuffleLines(); 
+  }); 
+  $("#3-feedbackLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.getFeedback(); 
+  }); 
+}();
+  
+## Parsons 4 (Language Translation Grader)
+Print out "I am a Java program" three times using a for loop.
+
+<div id="4-sortableTrash" class="sortable-code"></div> 
+<div id="4-sortable" class="sortable-code"></div> 
+<div style="clear:both;"></div> 
+<p> 
+    <input id="4-feedbackLink" value="Get Feedback" type="button" /> 
+    <input id="4-newInstanceLink" value="Reset Problem" type="button" /> 
+</p> 
+<script type="text/javascript">
+function(){
+  var initial = "for (int i=0;i<3;i++) {\n" +
+    "System.out.print(\\"I \\");\n" +
+    "System.out.print(\\"am \\");\n" +
+    "System.out.print(\\"a Java program \\");\n" +
+    "}";
+  var parsonsPuzzle = new ParsonsWidget({
+    "sortableId": "4-sortable",
+    "max_wrong_lines": 1,
+    "grader": ParsonsWidget._graders.LanguageTranslationGrader,
+    "exec_limit": 2500,
+    "can_indent": true,
+    "x_indent": 50,
+    "lang": "en",
+    "executable_code": "for x in range(3):\n    output += 'I '\n    output += 'am '\n    output += 'a Java program '\npass",
+    "programmingLang": "java",
+    "vartests": [
+        {
+            "message": "Testing...",
+            "initcode": "output = ''",
+            "code": "",
+            "variables": {
+                "output": "I am a Java program I am a Java program I am a Java program "
+            }
+        }
+    ]
+  });
+  parsonsPuzzle.init(initial);
+  parsonsPuzzle.shuffleLines();
+  $("#4-newInstanceLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.shuffleLines(); 
+  }); 
+  $("#4-feedbackLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.getFeedback(); 
+  }); 
+}();
+
+
+## Parsons 5 (Turtle Grader)
+Construct a program by dragging&amp;dropping and reordering lines. The constructed program should draw a triangle like shown below.
+
+<div id="5-sortableTrash" class="sortable-code"></div> 
+<div id="5-sortable" class="sortable-code"></div> 
+<div style="clear:both;"></div> 
+<p> 
+    <input id="5-feedbackLink" value="Get Feedback" type="button" /> 
+    <input id="5-newInstanceLink" value="Reset Problem" type="button" /> 
+</p> 
+<script type="text/javascript">
+function(){
+  var initial = "REPEAT 3 TIMES\n" +
+    "  forward(100)\n" +
+    "  left(120)\n" +
+    "ENDREPEAT";
+  var parsonsPuzzle = new ParsonsWidget({
+    "sortableId": "5-sortable",
+    "max_wrong_lines": 1,
+    "grader": ParsonsWidget._graders.TurtleGrader,
+    "exec_limit": 2500,
+    "can_indent": true,
+    "x_indent": 50,
+    "lang": "en",
+    "trashId": "sortableTrash",
+    "executable_code": "for i in range(0,3):\nmyTurtle.forward(100)\nmyTurtle.left(120)\npass",
+    "programmingLang": "pseudo",
+    "turtleModelCode": "modelTurtle.forward(100)\nmodelTurtle.left(120)\nmodelTurtle.forward(100)\nmodelTurtle.left(120)\nmodelTurtle.forward(100)\nmodelTurtle.left(120)",
+  });
+  parsonsPuzzle.init(initial);
+  parsonsPuzzle.shuffleLines();
+  $("#5-newInstanceLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.shuffleLines(); 
+  }); 
+  $("#5-feedbackLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.getFeedback(); 
+  }); 
+}();
+
+### Implementation Notes
+
+When you host multiple Parson's problems on a single markdown page, you need to add a unique prefix. You can easily do this in the Codio generator by typing a unique prefix into the "Prefix" textbox and pressing Enter/Return. Then you can simply copy-paste like normal.
+
+If want each problem to be it's own page, you can use relative path links at the bottom of each of your markdown pages as seen below. If you want students to be able to return to previous problems in this format, consider adding previous links or link to a table of contents like page.
+
+### Example Next Link
+[Next](./parsons/example1.html)

@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: Example 2
 ---
 <div id="sortableTrash" class="sortable-code"></div>
@@ -37,3 +37,5 @@ $("#feedbackLink").click(function(event){
     parsonsPuzzle2.getFeedback();
 });
 </script>
+
+[Previous](./parsons/example1.html)
