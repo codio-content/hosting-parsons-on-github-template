@@ -50,7 +50,6 @@ function(){
   $("#2-feedbackLink").click(function(event){ 
       event.preventDefault(); 
       parsonsPuzzle.getFeedback(); 
-  }); 
-</script>
+ });</script>
     
 [Next](./example2.html)
