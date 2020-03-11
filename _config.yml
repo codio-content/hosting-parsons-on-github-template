@@ -26,7 +26,7 @@ description: # >- # this means to ignore newlines until "baseurl:"
 
   To check your work, press the "Get Feedback" button.
   To start over, press the "Reset Problem" button.
-baseurl: "/parsons-ui-example" # the subpath of your site, e.g. /blog
+baseurl: "/hosting-parsons-on-github-template" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username:
 github_username:
