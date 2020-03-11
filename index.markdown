@@ -43,7 +43,7 @@ function(){
       event.preventDefault(); 
       parsonsPuzzle.getFeedback(); 
   }); 
-}();
+}();</script>
   
 
 ## Parsons 2 (Variable Check Grader)
@@ -95,7 +95,7 @@ function(){
       event.preventDefault(); 
       parsonsPuzzle.getFeedback(); 
   }); 
-}();
+}();</script>
   
 ## Parsons 3 (Unit Test Grader)
 Your task is to construct a function which returns the index of the largest element in the array.
@@ -138,7 +138,7 @@ function(){
       event.preventDefault(); 
       parsonsPuzzle.getFeedback(); 
   }); 
-}();
+}();</script>
   
 ## Parsons 4 (Language Translation Grader)
 Print out "I am a Java program" three times using a for loop.
@@ -188,7 +188,7 @@ function(){
       event.preventDefault(); 
       parsonsPuzzle.getFeedback(); 
   }); 
-}();
+}();</script>
 
 
 ## Parsons 5 (Turtle Grader)
@@ -230,7 +230,7 @@ function(){
       event.preventDefault(); 
       parsonsPuzzle.getFeedback(); 
   }); 
-}();
+}();</script>
 
 ### Implementation Notes
 
