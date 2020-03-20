@@ -1,7 +1,7 @@
 # Hosting Parsons on Github Template
 This repo is a template to help you quickly and easily host Parson's problems on GitHub.
 
-You can use [Codio's graphical Parson's problems generator](https://codio.github.io/parsons-puzzle-ui/dist/) to create the Parson's problems and paste them into this template.
+You can use [Codio's graphical Parson's problems generator](https://codio.github.io/parsons-puzzle-ui/dist/) to create the Parson's problems and paste them into this template. [Visit the other repo's main page for help on using the generator.](https://codio.github.io/parsons-puzzle-ui/)
 
 ## How to host your own Parson's Problems
 
