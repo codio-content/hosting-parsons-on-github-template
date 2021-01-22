@@ -23,13 +23,13 @@ You can use [Codio's graphical Parson's problems generator](https://codio.github
 
 1. To check that your repo is now setup correctly, return to the "Code" tab on the far left (you can get there by clicking on the repo name at the top too). 
 
-1. Click on the environment button with the rocketship icon
+1. Click on the environment button with the rocketship icon on the right-side of the page
 
-    ![Click environment button at top of page](https://raw.githubusercontent.com/edeitrick/parsons-ui-example/master/GitHub%20-%20Environment.png)
+    ![Click github-pages link on the right-side of the page](https://raw.githubusercontent.com/codio-content/hosting-parsons-on-github-template/master/Environments.png)
 
 1. Click on the "View Deployment" button - the one at the top is the most recent.
 
-    ![Click on the "View Deployment" button](https://raw.githubusercontent.com/edeitrick/parsons-ui-example/master/GitHub%20-%20Deployment.png)
+    ![Click on the "View Deployment" button](https://raw.githubusercontent.com/codio-content/hosting-parsons-on-github-template/master/Deployments.png)
     
 ## How to Add Generated Parson's Problems
 
