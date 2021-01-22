@@ -31,10 +31,6 @@ You can use [Codio's graphical Parson's problems generator](https://codio.github
 
     ![Click on the "View Deployment" button](https://raw.githubusercontent.com/edeitrick/parsons-ui-example/master/GitHub%20-%20Deployment.png)
     
-1. You should be re-directed to a page with the example Parson questions that looks like this
-
-    ![default example page](https://raw.githubusercontent.com/edeitrick/parsons-ui-example/master/LivePageExamples.png)
-    
 ## How to Add Generated Parson's Problems
 
 1. Use [Codio's graphical Parson's problems generator](https://codio.github.io/parsons-puzzle-ui/dist/) to create a Parson's problem
