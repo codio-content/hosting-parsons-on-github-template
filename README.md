@@ -41,4 +41,4 @@ You can use [Codio's graphical Parson's problems generator](https://codio.github
 
 1. (optional) If you are hosting multiple parsons problems on the same page (in the same markdown) then add a unique pre-fix in the textbox at the top and press enter.
 
-1. Copy the code into a markdown file on Github
+1. Copy the code into index.markdown
