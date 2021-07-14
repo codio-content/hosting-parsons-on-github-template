@@ -8,7 +8,7 @@ title: Multiple Parson's Problems on One Page
 # Parsons Practice
 
 ## Parsons 1 (Line Based Grader)
-Re-arrange the blocks below so they print out "Hello World!"
+Re-arrange the blocks below so they print out "Hello Fred!"
 
 <div id="p1-sortableTrash" class="sortable-code"></div>
 <div id="p1-sortable" class="sortable-code"></div>
@@ -21,7 +21,7 @@ Re-arrange the blocks below so they print out "Hello World!"
 (function() {
   var initial = "print(\"Hello\")\n" +
     "print(\" \")\n" +
-    "print(\"Hutchison\")\n" +
+    "print(\"Fred\")\n" +
     "print(\"!\")";
   var parsonsPuzzle = new ParsonsWidget({
     "sortableId": "p1-sortable",
