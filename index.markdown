@@ -21,7 +21,7 @@ Re-arrange the blocks below so they print out "Hello World!"
 (function() {
   var initial = "print(\"Hello\")\n" +
     "print(\" \")\n" +
-    "print(\"World\")\n" +
+    "print(\"Hutchison\")\n" +
     "print(\"!\")";
   var parsonsPuzzle = new ParsonsWidget({
     "sortableId": "p1-sortable",
