@@ -10,36 +10,41 @@ title: Multiple Parson's Problems on One Page
 ## Parsons 1 (Line Based Grader)
 Re-arrange the blocks below so they print out "Hello World!"
 
-<div id="p1-sortableTrash" class="sortable-code"></div>
-<div id="p1-sortable" class="sortable-code"></div>
+<div id="sortableTrash" class="sortable-code"></div>
+<div id="sortable" class="sortable-code"></div>
 <div style="clear:both;"></div>
 <p>
-    <input id="p1-feedbackLink" value="Get Feedback" type="button" />
-    <input id="p1-newInstanceLink" value="Reset Problem" type="button" />
+    <input id="feedbackLink" value="Get Feedback" type="button" />
+    <input id="newInstanceLink" value="Reset Problem" type="button" />
 </p>
 <script type="text/javascript">
-(function() {
-  var initial = "print(\"Hello\")\n" +
-    "print(\" \")\n" +
-    "print(\"World\")\n" +
-    "print(\"!\")";
+(function(){
+  var initial = "public static int recursivePopulation(int food, int population)\n" +
+    "{\n" +
+    "if(food - population &lt; 0)\n" +
+    "{\n" +
+    "return population;\n" +
+    "}\n" +
+    "return recursivePopulation(food-population+2000, population * 2);\n" +
+    "}";
   var parsonsPuzzle = new ParsonsWidget({
-    "sortableId": "p1-sortable",
+    "sortableId": "sortable",
     "max_wrong_lines": 10,
     "grader": ParsonsWidget._graders.LineBasedGrader,
     "exec_limit": 2500,
     "can_indent": false,
     "x_indent": 50,
     "lang": "en",
-    "trashId": "p1-sortableTrash"
+    "show_feedback": true,
+    "trashId": "sortableTrash"
   });
   parsonsPuzzle.init(initial);
   parsonsPuzzle.shuffleLines();
-  $("#p1-newInstanceLink").click(function(event){
+  $("#newInstanceLink").click(function(event){
       event.preventDefault();
       parsonsPuzzle.shuffleLines();
   });
-  $("#p1-feedbackLink").click(function(event){
+  $("#feedbackLink").click(function(event){
       event.preventDefault();
       parsonsPuzzle.getFeedback();
   });
