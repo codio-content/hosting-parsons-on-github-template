@@ -1,8 +1,214 @@
 ---
 ---
-
 @import "{{ site.theme }}";
 
+/* ===== Layout: sticky footer + full-height body ===== */
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #cee0e9;
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #333;
+  overflow-x: visible !important;
+}
+
+.main-content {
+  flex: 1 0 auto;
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+.page-header {
+  flex-shrink: 0;
+}
+
+.site-footer {
+  flex-shrink: 0;
+}
+
+/* ===== Header overlay via CSS variables ===== */
+:root {
+  --overlay-start: #0d6efd; /* default left colour */
+  --overlay-end:   #198754; /* default right colour */
+}
+
+#pageHeader {
+  background: linear-gradient(to right, var(--overlay-start), var(--overlay-end));
+  color: #fff;
+}
+
+/* ===== Footer styling ===== */
+.site-footer {
+  background-color: #212529; /* same as navbar bg-dark */
+  color: #f8f9fa;            /* Bootstrap text-light */
+  padding: 0.75rem 1.25rem;
+  margin-top: auto;          /* ensures bottom alignment */
+  border-top: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 -1px 6px rgba(0, 0, 0, 0.25);
+}
+
+.site-footer .footer-inner {
+  max-width: 100%;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+
+/* Right-hand controls container (YouTube + button) */
+.footer-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* YouTube link – styled pill */
+.footer-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #f8f9fa;
+  text-decoration: none;
+  font-size: 0.85rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 0.25rem;
+  border: 1px solid rgba(255,255,255,0.25);
+}
+
+.footer-link i {
+  color: #ff0000; /* YouTube red */
+}
+
+.footer-link:hover {
+  background: rgba(255,0,0,0.12);
+  border-color: #ff0000;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* Overlay toggle button styled to match */
+.site-footer #overlayToggle {
+  background: none;
+  color: #f8f9fa;
+  border: 1px solid rgba(255,255,255,0.4);
+  padding: 0.25rem 0.6rem;
+  border-radius: 0.25rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.site-footer #overlayToggle:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: rgba(255,255,255,0.7);
+}
+
+/* ===== Navbar dropdowns (Parson Puzzles multi-level) ===== */
+.dropdown-header {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #6c757d;
+}
+
+.dropdown-item.active {
+  font-weight: 600;
+  background-color: rgba(13, 110, 253, 0.15);
+}
+
+/* Base width for dropdowns */
+.dropdown-menu {
+  width: max-content;
+  min-width: 260px;
+}
+
+/* Second-level dropdown positioning */
+.dropdown-submenu .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-left: .1rem;
+  margin-right: .1rem;
+}
+
+/* Show submenu on hover (desktop) */
+@media (min-width: 992px) {
+  .navbar .dropdown-menu .dropdown-submenu:hover > .dropdown-menu {
+    display: block;
+  }
+}
+
+/* Right-facing arrow for submenus */
+.dropdown-submenu > .dropdown-item.dropdown-toggle::after {
+  float: right;
+  border-top: .3em solid transparent;
+  border-right: 0;
+  border-bottom: .3em solid transparent;
+  border-left: .3em solid currentColor;
+  margin-top: .45rem;
+}
+
+/* ===== Carousel arrows (override Bootstrap icons) ===== */
+
+/* Remove Bootstrap's default background-image icons */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-image: none !important;
+  background-color: transparent;
+  width: 2rem;
+  height: 2rem;
+  display: none; 
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  
+}
+
+/* Custom chevrons */
+.carousel-control-prev-icon::after {
+  content: '‹';
+  font-size: 1rem;
+  line-height: 1;
+  color: #ffffff;
+}
+
+.carousel-control-next-icon::after {
+  content: '›';
+  font-size: 2rem;
+  line-height: 1;
+  color: #ffffff;
+}
+
+/* Control hitbox width */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 6%;
+}
+
+/* Push content in from the edges inside each slide
+   (so arrows don't overlap text/buttons) */
+#homeCarousel .carousel-item > .d-flex {
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
+}
+
+/* ===== Misc styling ===== */
 .sortable-code {
-  width: 56%;
+  width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-weight: 600;
+  margin-top: 1.4em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
 }
